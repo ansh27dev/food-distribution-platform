@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Profile</title>
+    <link rel="stylesheet" href="../public/stylesheets/style-profile.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome [Restaurant Name]</h1>
+    </header>
+    <main>
+      <section>
+        <div class="h2">
+          <h2>Raise a New Food Listing</h2>
+        </div>
+        <div class="input-container">
+          <form id="foodListingForm">
+            <div>
+              <label for="serveSize">Serving Size:</label>
+              <input type="text" id="serveSize" name="serveSize" required />
+            </div>
+            <div>
+              <label for="foodDescription">Food Description:</label>
+              <input
+                type="text"
+                id="foodDescription"
+                name="foodDescription"
+                required
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- Footer content here -->
+    </footer>
+  </body>
+</html>
