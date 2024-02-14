@@ -1,0 +1,19 @@
+<!-- listings.ejs -->
+<html>
+  <head>
+    <title>Listings Page</title>
+    <link rel="stylesheet" href="./stylesheets/style-listings.css" />
+  </head>
+  <body>
+    <h1>Listings</h1>
+    <ul>
+      <% foodDonations.forEach(food => { %>
+      <li>
+        <h2><%= food.restaurant %></h2>
+        <p><%= food.serveSize %></p>
+        <p><%= food.foodDescription %></p>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

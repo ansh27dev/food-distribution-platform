@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Page</title>
-    <link rel="stylesheet" href="../public/stylesheets/style-register.css" />
+    <link rel="stylesheet" href="./stylesheets/style-register.css" />
   </head>
   <body>
     <div class="container">
       <h2>Registration Form</h2>
-      <form action="#">
+      <form action="/register" method="POST">
         <input
           type="text"
-          name="restaurant_name"
+          name="Restaurantname"
           placeholder="Restaurant Name"
           required
         />
         <input type="text" name="address" placeholder="Address" required />
         <input
           type="text"
-          name="phone_number"
+          name="phoneNumber"
           placeholder="Phone Number"
           required
         />
@@ -34,7 +34,10 @@
         <input type="submit" value="Register" />
       </form>
       <div class="login-link">
-        <p>Already registered? <a href="login.html">Click here to login</a></p>
+        <p>
+          Already registered?
+          <a href="/server/views/login.ejs">Click here to login</a>
+        </p>
       </div>
     </div>
   </body>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="../public/stylesheets/style-login.css" />
+    <link rel="stylesheet" href="./stylesheets/style-login.css" />
   </head>
   <body>
     <div class="login-container">
       <h2>Login</h2>
-      <form class="login-form" action="#">
+      <form class="login-form" action="/login" method="post">
         <input type="text" name="username" placeholder="Username" required />
         <input
           type="password"
@@ -20,7 +20,10 @@
         <input type="submit" value="Login" />
       </form>
       <div class="registeration-link">
-        <p>not registered? <a href="login.html">Click here to register</a></p>
+        <p>
+          not registered?
+          <a href="/server/views/register.ejs">Click here to register</a>
+        </p>
       </div>
     </div>
   </body>

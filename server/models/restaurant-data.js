@@ -41,6 +41,6 @@ const restaurantSchema = new Schema({
 
 restaurantSchema.plugin(plm);
 
-const Restaurant = mongoose.model("Restaurant", restaurantSchema);
+const restaurantModel = mongoose.model("Restaurant", restaurantSchema);
 
-module.exports = Restaurant;
+module.exports = restaurantModel;

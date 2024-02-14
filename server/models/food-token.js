@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+mongoose.connect(process.env.MONGO_URI);
+
 const foodTokenSchema = new Schema({
   serveSize: {
     type: String,
@@ -11,22 +13,10 @@ const foodTokenSchema = new Schema({
     required: true,
   },
   restaurant: {
-    type: Schema.Types.ObjectId,
-    ref: "Restaurant",
-    required: true,
-  },
-  createdDate: {
-    type: Date,
-    default: Date.now,
-  },
-  createdTime: {
     type: String,
+    ref: "Restaurantname",
     required: true,
-    default: () => {
-      const now = new Date();
-      return `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-    }, // Close the default function and add a comma if there are more fields after this
-  }, // Close the createdTime field definition
+  },
 });
 
 const FoodToken = mongoose.model("FoodToken", foodTokenSchema);

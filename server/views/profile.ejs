@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Profile</title>
-    <link rel="stylesheet" href="../public/stylesheets/style-profile.css" />
+    <link rel="stylesheet" href="./stylesheets/style-profile.css" />
   </head>
   <body>
     <header>
@@ -16,7 +16,7 @@
           <h2>Raise a New Food Listing</h2>
         </div>
         <div class="input-container">
-          <form id="foodListingForm">
+          <form id="foodListingForm" action="/profile" method="post">
             <div>
               <label for="serveSize">Serving Size:</label>
               <input type="text" id="serveSize" name="serveSize" required />
@@ -33,10 +33,10 @@
             <button type="submit">Submit</button>
           </form>
         </div>
+        <div class="logout">
+          <a href="/server/views/home.ejs"><h4>logout</h4></a>
+        </div>
       </section>
     </main>
-    <footer>
-      <!-- Footer content here -->
-    </footer>
   </body>
 </html>
